@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url(https://fonts.googleapis.com/css2?family=Jua&display=swap);
+
+body {
+  @apply bg-background font-jua text-white;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #512da8;
+}
+
+.input, input[type=file]::file-selector-button {
+    @apply px-4 py-2 rounded-md outline-none border border-white/30 bg-gray/20 hover:bg-gray/40 text-white;
+}
+
+.ticker {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateZ(0);
+        visibility: visible;
+    }
+    
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+img {
+    position: relative !important;
+}
+
+.chip {
+    @apply cursor-pointer outline-none focus:outline-none active:outline-none transition-all duration-100 transform-gpu !p-0.5 !px-2 mr-2 ring-1 ring-white/5 bg-slate-400/5 hover:ring-white/10 active:ring-white/20 text-white/60 hover:text-white/80 rounded-md text-sm;
+}
+
+.buy-button {
+    @apply px-4 py-2 text-center text-white border border-transparent hover:border-white/10 focus:border-white/20 rounded-md cursor-pointer hover:bg-emerald-500/60 focus:bg-emerald-500/80;
+}
+
+.sell-button {
+    @apply px-4 py-2 text-center text-white border hover:border-white/10 focus:border-white/20 rounded-md cursor-pointer border-red-500/10 hover:bg-red-500/60 focus:bg-red-500/80;
+}
+
+.action-button {
+    @apply cursor-pointer outline-none focus:outline-none active:outline-none duration-100 transform-gpu w-full rounded-md px-4 py-3 text-white text-opacity-100 transition-all hover:opacity-80 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600;
+}
+
+.disabled-button {
+    @apply outline-none w-full rounded-md px-4 py-3 bg-slate-400/5 text-white/60;
+}
